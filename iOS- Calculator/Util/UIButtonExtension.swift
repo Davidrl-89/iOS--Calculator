@@ -7,6 +7,9 @@
 
 import UIKit
 
+
+private let orange = UIColor(red: 254/255, green: 148/255, blue: 0/255, alpha: 1)
+
 extension UIButton {
     
     // Borde redondo
@@ -27,6 +30,11 @@ extension UIButton {
     }
     
     
+    // aparencia selección botón de operación
+    func selectOperation(_ selected: Bool) {
+        backgroundColor = selected ? .white : orange                                // si esta seleccionado el fondo es blanco, si no es naranja
+        setTitleColor(selected ? orange : .white , for: .normal)
+    }
     
     
 }
